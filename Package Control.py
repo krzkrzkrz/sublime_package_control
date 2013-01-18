@@ -1796,7 +1796,7 @@ class WgetDownloader(CliDownloader):
         self.tmp_file = tempfile.NamedTemporaryFile().name
         command = [self.wget, '--connect-timeout=' + str(int(timeout)), '-o',
             self.tmp_file, '--save-headers', '-O', '-', '-U',
-            self.settings.get('user_agent'), '--content-on-error', '--header',
+            self.settings.get('user_agent'), '--header',
             # Don't be alarmed if the response from the server does not select
             # one of these since the server runs a relatively new version of
             # OpenSSL which supports compression on the SSL layer, and Apache
